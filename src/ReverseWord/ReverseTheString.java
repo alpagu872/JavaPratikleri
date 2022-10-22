@@ -1,21 +1,20 @@
 package ReverseWord;
 
-
-import java.lang.reflect.Array;
-
 public class ReverseTheString {
-    private static String reverseString = "";
+
 
     public static void main(String[] args) {
-
+        String TestString = "TERSTEN OKU ŞUNU COCA COLA";
+        System.out.println(Reverse(TestString,0));
 
     }
 
 
-    public static void makeReverse(char[] word){
-        if (word.length > 0){
-            reverseString += word[word.length -1];
+    public static String Reverse(String testString, int index){
+        if (index < testString.length()){
+            return Reverse(testString, index +1) + testString.charAt(index);
+        }else {
+            return "";
         }
-
     }
 }
